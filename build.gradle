@@ -1,0 +1,48 @@
+buildscript {
+    ext.kotlin_version = '1.6.20'
+    ext.hilt_version ='2.41'
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    minSdkVersion = 21
+    targetSdkVersion = 31
+    compileSdkVersion = 31
+    versionCode = 1
+    versionName = "1.0.0"
+    bundleName = "com.example.v_jet_test"
+    apiKey = "43fe78af63f64c218b91887e1a3f6882"
+
+    junitVersion = '5.7.0'
+    androidXJunitVersion = '1.1.3-alpha03'
+    assertjVersion = '3.19.0'
+    coreTestingVersion = '2.1.0'
+    espressoIntentsVersion = '3.3.0'
+    espressoVersion = '3.3.0'
+    coroutinesTestVersion = '1.4.2-native-mt'
+    appcompatVersion='1.2.0'
+    materialVersion= '1.3.0-rc01'
+    activityKtxVersion= '1.6.0-alpha01'
+    retrofitVersion = '2.9.0'
+    moshiVersion = '1.11.0'
+    okhttpInterceptorVersion = '4.9.0'
+    mockVersion = '1.10.5'
+    annotationVersion ='1.1.0'
+    glid = '4.11.0'
+    picassoVersion = '2.71828'
+    livedata_ktx='2.3.0'
+}
